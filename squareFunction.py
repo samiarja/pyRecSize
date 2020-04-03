@@ -6,11 +6,6 @@
 '''
 import os, sys
 import re
-import math
-import argparse
-import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
-import numpy as np
 
 FILE_NAME = 'output.txt'
 
@@ -51,25 +46,15 @@ row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9 = square(n, size, 
 with open(FILE_NAME, 'r') as txtfile:
     lines = txtfile.readlines()
 
-l1 = [str(i) for i in row_1]
-l2 = [str(i) for i in row_2]
-l3 = [str(i) for i in row_3]
-l4 = [str(i) for i in row_4]
-l5 = [str(i) for i in row_5]
-l6 = [str(i) for i in row_6]
-l7 = [str(i) for i in row_7]
-l8 = [str(i) for i in row_8]
-l9 = [str(i) for i in row_9]
-
-writetoendofline(lines, 0, " ".join(str(x) for x in l1))
-writetoendofline(lines, 1, " ".join(str(x) for x in l2))
-writetoendofline(lines, 2, " ".join(str(x) for x in l3))
-writetoendofline(lines, 3, " ".join(str(x) for x in l4))
-writetoendofline(lines, 4, " ".join(str(x) for x in l5))
-writetoendofline(lines, 5, " ".join(str(x) for x in l6))
-writetoendofline(lines, 6, " ".join(str(x) for x in l7))
-writetoendofline(lines, 7, " ".join(str(x) for x in l8))
-writetoendofline(lines, 8, " ".join(str(x) for x in l9))
+writetoendofline(lines, 0, " ".join(str(x) for x in [str(i) for i in row_1]))
+writetoendofline(lines, 1, " ".join(str(x) for x in [str(i) for i in row_2]))
+writetoendofline(lines, 2, " ".join(str(x) for x in [str(i) for i in row_3]))
+writetoendofline(lines, 3, " ".join(str(x) for x in [str(i) for i in row_4]))
+writetoendofline(lines, 4, " ".join(str(x) for x in [str(i) for i in row_5]))
+writetoendofline(lines, 5, " ".join(str(x) for x in [str(i) for i in row_6]))
+writetoendofline(lines, 6, " ".join(str(x) for x in [str(i) for i in row_7]))
+writetoendofline(lines, 7, " ".join(str(x) for x in [str(i) for i in row_8]))
+writetoendofline(lines, 8, " ".join(str(x) for x in [str(i) for i in row_9]))
 
 # write to the file
 with open(FILE_NAME, 'w') as txtfile:
