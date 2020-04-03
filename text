@@ -1,9 +1,0 @@
-Fixed_Surveillance_Auto_Detection_Predicition_Region = x, y, w, h
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Min_Temperture = -100, 67899
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Max_Temperture = ebt
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Prediction_Reange_Num = 1,
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Prediction_Reange_Interval = 10,
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Reange_Num = 1,
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Reange_Interval = 1,
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Min = -100,
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Max = 30,
