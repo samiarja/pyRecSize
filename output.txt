@@ -1,9 +1,13 @@
-Fixed_Surveillance_Auto_Detection_Predicition_Region =156, 124, 8, 8
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Min_Temperture = -100
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Max_Temperture =38
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Prediction_Reange_Num =1
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Prediction_Reange_Interval =10
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Reange_Num =1
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Reange_Interval = 1
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Min = -100
-Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Max = 30
+Fixed_Surveillance_Auto_Detection_Predicition_Region =152, 120, 8, 8 160, 120, 8, 8 152, 128, 8, 8 160, 128, 8, 8
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Min_Temperture = -100 -100 -100 -100
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Max_Temperture=38 38 38 38
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Prediction_Reange_Num =1 1 1 1
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Prediction_Reange_Interval =10 10 10 10
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Reange_Num =1 1 1 1
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Reange_Interval = 1 1 1 1
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Min = -100 -100 -100 -100
+Fixed_Surveillance_Auto_Detection_Predicition_Region_Trend_Max = 30 30 30 30
+
+
+
+
