@@ -25,3 +25,13 @@ A function that takes input n (# of boxes) and size (size of the square) and ele
 Done!
 
 **Example:**
+
+Text file before running the script:
+
+![Alt Text](img/sample2.png)
+
+![Alt Text](img/sample3.png)
+
+Text file after running the script:
+
+![Alt Text](img/sample4.png)
