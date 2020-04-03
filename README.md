@@ -4,7 +4,7 @@
 
 A function that takes input n (# of boxes) and size (size of the square) and elevation body temperature (ebt) and return the Xn, Yn, Wn, Hn and and write them to a text file.
 
-![Alt Text](img/sample1.png)
+![Alt Text](img/sample1.PNG)
 
 **Installation Steps:**
 
@@ -28,10 +28,10 @@ Done!
 
 Text file before running the script:
 
-![Alt Text](img/sample2.png)
+![Alt Text](img/sample2.PNG)
 
-![Alt Text](img/sample3.png)
+![Alt Text](img/sample3.PNG)
 
 Text file after running the script:
 
-![Alt Text](img/sample4.png)
+![Alt Text](img/sample4.PNG)
