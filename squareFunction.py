@@ -8,46 +8,83 @@ import os, sys
 import re
 import math
 import argparse
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
 import numpy as np
 
 FILE_NAME = 'output.txt'
 
-def square(width, height, n, w, h):
-    x0 = (width - n * w) // 2
-    y0 = (height - n * h) //2
-    coords = [[x0 + ix * w, y0 + iy * h] for iy in range(n) for ix in range(n)]
-    return coords
+def square(n, size,ebt):
+    width = 320
+    height= 256
+    minTemperture = -100
+    Prediction_Reange_Num = 1
+    Prediction_Reange_Interval  = 10
+    Trend_Reange_Num  = 1
+    Trend_Reange_Interval = 1
+    Region_Trend_Min = minTemperture
+    Region_Trend_Max  = 30
+    x0 = (width - n * size) // 2
+    y0 = (height - n * size) // 2
+    Predicition_Region = [[x0 + ix * size, y0 + iy * size, size, size] for iy in range(n) for ix in range(n)]
+    Min_Temperture = [[minTemperture] for iy in range(n) for ix in range(n)]
+    Max_Temperture = [[ebt] for iy in range(n) for ix in range(n)]
+    Prediction_Reange_Num = [[Prediction_Reange_Num] for iy in range(n) for ix in range(n)]
+    Prediction_Reange_Interval  = [[Prediction_Reange_Interval] for iy in range(n) for ix in range(n)]
+    Trend_Reange_Num = [[Trend_Reange_Num] for iy in range(n) for ix in range(n)]
+    Trend_Reange_Interval = [[Trend_Reange_Interval] for iy in range(n) for ix in range(n)]
+    Region_Trend_Min = [[Region_Trend_Min] for iy in range(n) for ix in range(n)]
+    Region_Trend_Max = [[Region_Trend_Max] for iy in range(n) for ix in range(n)]
+    
+    return Predicition_Region, Min_Temperture, Max_Temperture, Prediction_Reange_Num, Prediction_Reange_Interval, Trend_Reange_Num, Trend_Reange_Interval, Region_Trend_Min, Region_Trend_Max
 
-print(square(320, 240, 2, 32, 24))
+def writetoendofline(lines, line_no, append_txt):
+    lines[line_no] = lines[line_no].replace('\n', '') + append_txt + '\n'
+    
+n = int(input("Enter Number of Boxes: "))
+size = int(input("Enter Size of the boxes: "))
+ebt = int(input("Enter Elevated Body Temperature: "))
 
+row_1, row_2, row_3, row_4, row_5, row_6, row_7, row_8, row_9 = square(n, size, ebt)
 
+# open the file
+with open(FILE_NAME, 'r') as txtfile:
+    lines = txtfile.readlines()
 
-# def square(n, size, ebt):
-#     xs = 320
-#     ys = 256
-#     nx = int(xs)/2
-#     ny = int(ys)/2
-  
-#     print(nx, ny)
-#     return nx, ny
+l1 = [str(i) for i in row_1]
+l2 = [str(i) for i in row_2]
+l3 = [str(i) for i in row_3]
+l4 = [str(i) for i in row_4]
+l5 = [str(i) for i in row_5]
+l6 = [str(i) for i in row_6]
+l7 = [str(i) for i in row_7]
+l8 = [str(i) for i in row_8]
+l9 = [str(i) for i in row_9]
 
-# def writetoendofline(lines, line_no, append_txt):
-#     lines[line_no] = lines[line_no].replace('\n', '') + append_txt + '\n'
+writetoendofline(lines, 0, " ".join(str(x) for x in l1))
+writetoendofline(lines, 1, " ".join(str(x) for x in l2))
+writetoendofline(lines, 2, " ".join(str(x) for x in l3))
+writetoendofline(lines, 3, " ".join(str(x) for x in l4))
+writetoendofline(lines, 4, " ".join(str(x) for x in l5))
+writetoendofline(lines, 5, " ".join(str(x) for x in l6))
+writetoendofline(lines, 6, " ".join(str(x) for x in l7))
+writetoendofline(lines, 7, " ".join(str(x) for x in l8))
+writetoendofline(lines, 8, " ".join(str(x) for x in l9))
 
-# # open the file
-# with open(FILE_NAME, 'r') as txtfile:
-#     lines = txtfile.readlines()
-# writetoendofline(lines, 1, '23 ')
-# # writetoendofline(lines, 0, nx)
-# # write to the file
-# with open(FILE_NAME, 'w') as txtfile:
-#     txtfile.writelines(lines)
-# # write to the file
-# txtfile.close()
+# write to the file
+with open(FILE_NAME, 'w') as txtfile:
+    txtfile.writelines(lines)
 
+txtfile.close()
 
-# if __name__ == '__main__':
-#     n = sys.argv[1]
-#     size = sys.argv[2]
-#     ebt = sys.argv[3]
-#     square(n, size, ebt)
+with open(FILE_NAME, 'r') as my_file:
+    text = my_file.read()
+    text = text.replace("[", "")
+    text = text.replace("]", "")
+
+with open(FILE_NAME, 'w') as my_file:
+    my_file.write(text)
+my_file.close()
+
+print("Process Completed...")
+print("Please check output.txt...")
